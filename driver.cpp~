@@ -27,7 +27,6 @@ double barronCliffSpelunk( int numOfPeople)
     double equipmentRental = 40.00;//day per person
     int numOfDays;
     double total;
-    double discount;
     
     
     if(numOfPeople < 5 )
@@ -35,11 +34,9 @@ double barronCliffSpelunk( int numOfPeople)
         total =(numOfPeople * baseCharge ) + (numOfDays *equipmentRental);
      
      return total;
-     }
-     else if ( numOfpeople => 5)
-     {
-        total= (numOfPeople * baseCharge) +(numOfdays * equipemtRental);
-         discount = (total * .9);
-         return discount;
-    }
- }   
+
+
+
+
+
+}
