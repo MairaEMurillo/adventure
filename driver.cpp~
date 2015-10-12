@@ -6,7 +6,7 @@ using namespace std;
 
 double scuba(int numPeople);
 double discount(double prices, int numPeople);
-double barronCliffSpelunk (int numOfPeople);
+
 
 int main()
 {
