@@ -7,7 +7,7 @@ using namespace std;
 
 double sky(int num);
 int main(){
-cout << sky(5);
+
 return 0;}
 
 double sky(int num){
