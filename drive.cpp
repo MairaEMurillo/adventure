@@ -8,13 +8,14 @@ using namespace std;
 
 // Prototype
 double devilCourthouse(int numberPeople);
+double discountCheck(double price, int numberPeople);
 
 int main()
 {
 
 
 
-    
+
 
     return 0;
     
@@ -97,4 +98,14 @@ double devilCourthouse(int numberPeople)
     
     return total;
 
+}
+
+double discountCheck(double price, int numberPeople)
+{
+    if(numberPeople >= 5)
+    {
+        return price * 0.9;
+    }
+
+    return price;
 }
