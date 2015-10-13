@@ -14,7 +14,7 @@ int main()
 
 
 
-    cout << devilCourthouse(3) << endl;
+    
 
     return 0;
     
