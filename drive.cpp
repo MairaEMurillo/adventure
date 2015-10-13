@@ -8,6 +8,7 @@ using namespace std;
 
 // Prototype
 double devilCourthouse(int numberPeople);
+double discountCheck(double price, int numberPeople);
 
 int main()
 {
@@ -28,6 +29,7 @@ double devilCourthouse(int numberPeople)
     double equipmentRental = 0;    
     double BASE_CHARGE = 350;
     double CLIMBING_INSTRUCTOR = 100;
+    int rentalDays;
     
     total = BASE_CHARGE * numberPeople;
     
@@ -42,6 +44,7 @@ double devilCourthouse(int numberPeople)
         {
             break;
         }
+        
         cout << "Sorry I don't understand. Please use y for yes or n for no." << endl;
         cin >> choice;
         
@@ -64,6 +67,7 @@ double devilCourthouse(int numberPeople)
         {
             break;
         }
+        
         cout << "Sorry I don't understand. Please use y for yes or n for no." << endl;
         cin >> choice;
     }
@@ -71,12 +75,37 @@ double devilCourthouse(int numberPeople)
     
     if(choice == 'y')
     {
-        equipmentRental = 40 * numberPeople * DAYS;
+        cout << "For how many days?" << endl;
+        cin >> rentalDays;
+        
+        while(true)
+        {
+            if(rentalDays < 4 && rentalDays > 1)
+            {
+                break;
+            }
+            
+            cout << "The maximum number of days you can rent the equipment is 3 days.\n";
+            cout << "The minimum is 1 day." << endl;
+            cin >> rentalDays;
+            
+        }
+        
+        equipmentRental = 40 * numberPeople * rentalDays;
         total = total + equipmentRental;
         
-    
     }
     
     return total;
 
+}
+
+double discountCheck(double price, int numberPeople)
+{
+    if(numberPeople >= 5)
+    {
+        return price * 0.9;
+    }
+
+    return price;
 }
